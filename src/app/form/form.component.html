@@ -1,0 +1,9 @@
+<form [formGroup]="myForm">
+    <div formArrayName="imageUrls">
+        <div *ngFor="let imageUrl of imageUrls.controls; let i = index">
+            <div [formGroupName]="i">
+                <input type="text" formControlName="url">
+            </div>
+        </div>
+    </div>
+</form>
